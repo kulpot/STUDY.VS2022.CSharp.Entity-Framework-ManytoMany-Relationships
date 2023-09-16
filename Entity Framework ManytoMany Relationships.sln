@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity Framework ManytoMany Relationships", "Entity Framework ManytoMany Relationships\Entity Framework ManytoMany Relationships.csproj", "{9259B7CC-E04C-4824-AFE3-8AA006279782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9259B7CC-E04C-4824-AFE3-8AA006279782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9259B7CC-E04C-4824-AFE3-8AA006279782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9259B7CC-E04C-4824-AFE3-8AA006279782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9259B7CC-E04C-4824-AFE3-8AA006279782}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4342BDAA-1DDD-46DE-B20F-6E4BEBCEAB24}
+	EndGlobalSection
+EndGlobal
