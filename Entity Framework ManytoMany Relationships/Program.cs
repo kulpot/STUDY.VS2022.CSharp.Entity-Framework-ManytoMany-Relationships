@@ -42,8 +42,11 @@ using System.Runtime.Remoting.Contexts;
         select *
         from PlayLists
 
+        select *
+        from videoplaylists
+
         --insert into Videos values ('Me Title', 'Whatever', 5)     // to comment in SQLServer is type --
-        insert into Videos values ('Me Title', 'Whatever', 1)        
+        --insert into Videos values ('Me Title', 'Whatever', 1)        
 
 
         use master          // switch database
@@ -57,7 +60,7 @@ class PlayList
 {
     public int ID { get; set; }
     public string Title { get; set; }
-    public List<Video> Videos { get; set; }
+    public List<Video> Videos { get; set; }     // Auto List Mapping table - SQLserver
     public override string ToString()
     {
         string ret = Title + ": ";
@@ -72,6 +75,9 @@ class Video
     public int ID { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+
+    // Many-to-Manty Relationship -- added navigation
+    public List<PlayList> MyPlaylists { get; set; }     // Auto List Mapping table - SQLserver
 }
 
 class MeContext : DbContext     // PipeLine --SQLServer and VS-- Schema
@@ -103,8 +109,8 @@ class MainClass
             Description = "Share this with your friends."
         };
 
-        mePlaylist.Videos = new List<Video> { meAwesomeVideo };
-        meOtherPlaylist.Videos = new List<Video> { meAwesomeVideo };
+        mePlaylist.Videos = new List<Video> { meAwesomeVideo };     // Auto List Mapping table - SQLserver
+        meOtherPlaylist.Videos = new List<Video> { meAwesomeVideo };        // Auto List Mapping table - SQLserver
 
         db.Playlists.Add(mePlaylist);
         db.Playlists.Add(meOtherPlaylist);
